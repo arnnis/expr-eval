@@ -307,7 +307,7 @@ TokenStream.prototype.isRadixInteger = function () {
   }
 
   if (valid) {
-    this.current = this.newToken(TNUMBER, parseInt(this.expression.substring(startPos, pos), radix));
+    this.current = this.newToken(TNUMBER, this.expression.substring(startPos, pos));
     this.pos = pos;
   }
   return valid;
